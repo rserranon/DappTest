@@ -20,13 +20,15 @@
         <p class="help-block">${coinbaseBalance | currencyFormat}</p>
       </div>
       <div class="form-group">
-        <label>Accounts</label>
-        <p class="help-block">${accounts}</p>
-      </div>     
-      <select>
-        <template repeat.for="account of accounts">
+      <select value.bind="selectedAccount">
+        <template repeat.for="account of accounts" value.bind="account">${account}>
         <option>${account}</option>
-      </select>       
+      </select> 
+      </div>    
+      <div class="form-group">
+        <label>Selected Account Balance</label>
+        <p class="help-block">${selectedAccount}</p>
+      </div>             
       <button type="submit" class="btn btn-default">Submit</button>
     </form>
   </section>
