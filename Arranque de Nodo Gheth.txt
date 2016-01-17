@@ -1,0 +1,3 @@
+geth --identity "RSNode" --genesis "/Users/proyectoweb/Dropbox/RSN/BitCoin/Ethereum/PrivateBlockChain/CustomGenesis.json" --rp
+c --rpcaddr 0.0.0.0 --rpcport "8545" --rpccorsdomain "*" --datadir "/Users/proyectoweb/Dropbox/RSN/BitCoin/Ethereum/PrivateBlockChain/" --port "30303" --nodiscover --ipcapi "admin,
+db,eth,debug,miner,net,shh,txpool,personal,web3" --rpcapi "db,eth,net,web3" --autodag --networkid 1900 --nat "any" console

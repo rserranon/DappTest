@@ -1,0 +1,33 @@
+<template>
+  <require from="./currency-format"></require>
+  <section class="au-animate">
+    <h2>${heading}</h2>
+    <form role="form" submit.delegate="submit()">
+      <div class="form-group">
+        <label>Web3 Listening</label>
+        <p class="help-block">${web3Listening}</p>
+      </div>
+      <div class="form-group">
+        <label>Web3 is Connected</label>
+        <p class="help-block">${web3IsConnected}</p>
+      </div>      
+      <div class="form-group">
+        <label>Coinbase</label>
+        <p class="help-block">${coinbaseAddr}</p>
+      </div>
+      <div class="form-group">
+        <label>Coinbase Balance</label>
+        <p class="help-block">${coinbaseBalance | currencyFormat}</p>
+      </div>
+      <div class="form-group">
+        <label>Accounts</label>
+        <p class="help-block">${accounts}</p>
+      </div>     
+      <select>
+        <template repeat.for="account of accounts">
+        <option>${account}</option>
+      </select>       
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+  </section>
+</template>
