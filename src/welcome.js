@@ -15,6 +15,6 @@ export class Welcome {
   peerCount = web3.net.peerCount;
   coinbaseAddr = web3.eth.coinbase;
   coinbaseBalance = web3.fromWei(web3.eth.getBalance(web3.eth.coinbase), 'ether');
-  accounts = accounts = web3.eth.accounts;
+  accounts = web3.eth.accounts;
 }
 
